@@ -35,6 +35,9 @@ def measure_in_y_basis():
     prepare_psi()
 
     # PERFORM THE ROTATION BACK TO COMPUTATIONAL BASIS
+     # o adjunto é o transposto conjugado. É aplicado o adjunto na funcao que esta entre parenteses. 
+    # O Adjunto de uma funcao é aplicado na ordem inversa das portas que sao apliacadas na funcao. No nosso ex. a funcao
+    # aplica uma porta Hadamard e depois uma porta S ao estado. O adjunto será feito na ordem inversa : adjunto de S ao estado e depois adjunto de H ao estado.
     qml.adjoint(y_basis_rotation)()
 
     # RETURN THE MEASUREMENT OUTCOME PROBABILITIES
