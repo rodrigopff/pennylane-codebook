@@ -1,3 +1,6 @@
+import numpy as np
+import pennylane as qml
+
 v = np.array([0.52889389-0.14956775j, 0.67262317+0.49545818j])
 
 ##################
