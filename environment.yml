@@ -1,0 +1,22 @@
+## Libs necessarias para rodar o tutorial do pennylane
+
+name: pennylane-codebook
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10 # a versao >=3.11 da pau kkkk
+  - pip
+  - pip:
+    - pennylane
+    - pennylane-lightning 
+    - pennylane-lightning[gpu] 
+    - pennylane-sf 
+    - pennylane-qiskit 
+    - pennylane-cirq
+    - autograd 
+    - tensorflow 
+    - jax 
+    - jaxlib  
