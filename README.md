@@ -1,5 +1,9 @@
 # Codigos do pennylane
-São as solucoes dos exercicios de codificacao do tutorial do pennylane.
+São as solucoes dos exercicios de codificacao do tutorial do pennylane. Para acessar o tutorial crie uma conta no site
+
+https://www.xanadu.ai/
+
+Apos cria a conta acesse o link abaixo para iniciar o tutorial: 
 
 https://codebook.xanadu.ai/
 
