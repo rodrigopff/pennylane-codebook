@@ -3,7 +3,7 @@ São as solucoes dos exercicios de codificacao do tutorial do pennylane. Para ac
 
 https://www.xanadu.ai/
 
-Apos cria a conta acesse o link abaixo para iniciar o tutorial: 
+Apos criar a conta acesse o link abaixo para iniciar o tutorial: 
 
 https://codebook.xanadu.ai/
 
