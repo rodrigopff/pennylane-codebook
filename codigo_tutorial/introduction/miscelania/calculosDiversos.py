@@ -19,6 +19,3 @@ print()
 print("ROTACAO  EM X")
 print(np.cos(3.14159265e+00) * np.cos(7.15266381e-18))
 #7.15266381e-18 3.14159265e+00
-
-
-
