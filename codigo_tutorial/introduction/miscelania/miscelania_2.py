@@ -32,6 +32,13 @@ print("PRODUTO ZI.IZ - produto entre matrizes")
 print(prod1)
 print()
 
+HH = qml.Hadamard(0) @ qml.Hadamard(1) ## produto tensorial H @ H
+print ("TENSORIAL HH")
+print (HH.matrix())
+print ()
+
+
+
 
 #prod1 = qml.math.dot(IZ,ZI)
 #print (type(prod1))
@@ -39,3 +46,4 @@ print()
 #print ("PAULI rx")
 #print (type(ZZ))
 #print (qml.RX(np.pi, wires=0).matrix())
+
