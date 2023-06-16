@@ -2,7 +2,6 @@ from sympy import Matrix, pprint
 from sympy.physics.quantum import TensorProduct
 import numpy as np
 
-
 #m1 = Matrix([[1,2],[3,4]])
 #m2 = Matrix([[1,0],[0,1]])
 
@@ -41,9 +40,9 @@ print()
 
 
 print()
-print("#######################################################")
+print("##########################################################")
 print("## PORTA H ⊗ H (PRODUTO TENSORIAL ENTRE DUAS PORTAS H) ##")
-print("#######################################################")
+print("##########################################################")
 HXH = TensorProduct(H,H)
 print()
 pprint(HXH)
