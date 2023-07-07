@@ -14,10 +14,10 @@ import numpy as np
 
 
 ## A matriz da porta CNOT
-CNOTMatriz = Matrix([[1,0,0,0],
-			        [0,1,0,0],
-                    [0,0,0,1],
-                    [0,0,1,0]])
+CNOTMatriz = Matrix([[1.0, 0, 0, 0],
+			        [0, 1.0, 0, 0],
+                    [0, 0, 0, 1.0],
+                    [0, 0, 1.0, 0]])
 print()
 print("##################")
 print("##  PORTA CNOT  ##")
@@ -51,6 +51,9 @@ print()
 
 ## Gera o circuito que troca a ordem dos bits alvo (target) e de conrole (control)
 ## Bit alvo agora é o primeiro qbit e o bit de controle é o segundo qbit
+## Vide o livro do COMBARRO E CASTILLO pag. 29 e 30.
+## Lá existe a descricao da porta  CNOT invertida e de como usá-la com mais duas pras CNOT usuais 
+# para gerar uma porta de SWAPP 
 CNOTMatrizComInversaoDeQbits = HXH*CNOTMatriz*HXH 
 print()
 print("###########################################################")
@@ -61,7 +64,7 @@ pprint(CNOTMatrizComInversaoDeQbits)
 print()
 
 
-## Gera a matriz a porta de swap 
+## Gera a matriz da porta de swap (vide livro do COMBARRO E CASTILLO inicio da pag.30)
 swapMatriz = CNOTMatriz*CNOTMatrizComInversaoDeQbits*CNOTMatriz
 print()
 print("###################")

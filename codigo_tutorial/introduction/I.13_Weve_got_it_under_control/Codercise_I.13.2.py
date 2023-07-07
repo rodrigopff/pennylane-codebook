@@ -1,6 +1,3 @@
-import numpy as np
-import pennylane as qml
-
 dev = qml.device("default.qubit", wires=2)
 
 # Prepare a two-qubit state; change up the angles if you like
@@ -20,36 +17,35 @@ def prepare_states(phi, theta, omega):
 
     return qml.state()
 
-@qml.qnode(device=dev)
-def true_cz(phi, theta, omega):
+
+@qml.qnode(dev)
+def apply_swap(phi, theta, omega):
     prepare_states(phi, theta, omega)
-    
+
     ##################
     # YOUR CODE HERE #
     ##################
 
-    # IMPLEMENT THE REGULAR CZ GATE HERE
-    qml.CZ(wires=[0, 1])
-    
+    # IMPLEMENT THE REGULAR SWAP GATE HERE
+    qml.SWAP([0,1])
     return qml.state()
 
 
 @qml.qnode(dev)
-def imposter_cz(phi, theta, omega):
+def apply_swap_with_cnots(phi, theta, omega):
     prepare_states(phi, theta, omega)
     
     ##################
     # YOUR CODE HERE #
     ##################
 
-    # IMPLEMENT CZ USING ONLY H AND CNOT
-    qml.Hadamard(wires=1)
+    # IMPLEMENT THE SWAP GATE USING A SEQUENCE OF CNOTS
     qml.CNOT(wires=[0, 1])
-    qml.Hadamard(wires=1)
-    
+    qml.CNOT(wires=[1, 0])
+    qml.CNOT(wires=[0, 1])
+
     return qml.state()
 
-print(f"ESTADO INICIAL {prepare_states(phi, theta, omega)}")
 
-print(f"True CZ output state {true_cz(phi, theta, omega)}")
-print(f"Imposter CZ output state {imposter_cz(phi, theta, omega)}")
+print(f"Regular SWAP state = {apply_swap(phi, theta, omega)}")
+print(f"CNOT SWAP state = {apply_swap_with_cnots(phi, theta, omega)}")
