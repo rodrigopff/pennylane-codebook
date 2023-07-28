@@ -1,4 +1,5 @@
 from sympy import *
+import numpy as np
 
 ## Exemplo de como imprimir expressao matematicas  bonitinhas com o pprint
 x, y, z = symbols('x y z')

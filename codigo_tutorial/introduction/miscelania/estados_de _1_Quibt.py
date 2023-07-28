@@ -189,9 +189,8 @@ print("#################################")
 pprint(Matrix([[Xijs[0],Xijs[1]], [Xijs[2],Xijs[3]]]))
 print("#################################")
 print()
-
 pprint(operadorEmNotacaoDeDirac(Xijs,""))
-
+print()
 # Calcula-se os elementos da matriz de Y na base {|+>,|->}
 Yijs = calculaAijs(Y)
 #pprint(Yijs)
@@ -202,7 +201,7 @@ pprint(Matrix([[Yijs[0],Yijs[1]], [Yijs[2],Yijs[3]]]))
 print("#################################")
 print()
 pprint(operadorEmNotacaoDeDirac(Yijs,""))
-
+print()
 # Calcula-se os elementos da matriz de Z na base {|+>,|->}
 Zijs = calculaAijs(Z)
 #pprint(Zijs)
@@ -213,7 +212,7 @@ pprint(Matrix([[Zijs[0],Zijs[1]], [Zijs[2],Zijs[3]]]))
 print("#################################")
 print()
 pprint(operadorEmNotacaoDeDirac(Zijs,""))
-
+print()
 
 #pprint(bra_mais * Y * ket_mais)
 #pprint(bra_mais * Y * ket_menos)
